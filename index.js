@@ -6,11 +6,11 @@ const routes = require('./routes')
 const PORT = process.env.PORT || 5000
 
 const app = express()
-const limiter = rateLimit({
-  windowsMs: 10 * 60 * 1000,
-  max: 5,
-})
-app.use(limiter)
+// const limiter = rateLimit({
+//   windowsMs: 10 * 60 * 1000,
+//   max: 5,
+// })
+// app.use(limiter)
 app.set('trust proxy', 1)
 app.use(cors())
 
