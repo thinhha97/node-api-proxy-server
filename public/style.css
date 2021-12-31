@@ -1,0 +1,33 @@
+body {
+  background-color: aqua;
+}
+
+.container {
+  margin-top: 35vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+}
+
+.weather-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+#city-input {
+  border: none;
+  outline: none;
+  background-color: aqua;
+  color: black;
+  font-size: 2rem;
+}
+
+form button {
+  font-size: 1.5rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-top: .5px solid black;
+}
