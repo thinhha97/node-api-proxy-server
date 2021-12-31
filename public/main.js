@@ -6,6 +6,7 @@ const fetchWeather = async (city) => {
   const url = `/api?q=${city}`
   const res = await fetch(url)
   const data = await res.json()
+  console.log(data)
 
   if (data.cod === '404') {
     alert('City not found!')
