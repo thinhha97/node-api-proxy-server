@@ -1,33 +1,57 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 body {
   background-color: aqua;
 }
 
-.container {
-  margin-top: 35vh;
+li {
+  list-style: none;
+}
+
+.navbar {
+  height: 2rem;
+  top: 0;
+  margin-top: 0;
+  background-color: violet;
+}
+
+#first-level-nav {
   display: flex;
-  flex-direction: column;
+  align-content: space-between;
+  align-self: center;
   align-items: center;
-  align-content: center;
 }
 
-.weather-form {
+
+
+
+.weather-info {
+  margin-left: 5%;
+  width: 25vw;
+  outline: 0.5px black solid;
+}
+
+.current-temp {
   display: flex;
-  flex-direction: column;
-
+  flex-direction: row;
+  align-items: center;
 }
 
-#city-input {
-  border: none;
-  outline: none;
-  background-color: aqua;
-  color: black;
-  font-size: 2rem;
+.bold {
+  font-weight: bold;
 }
 
-form button {
-  font-size: 1.5rem;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-top: .5px solid black;
+.weather-items {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.pressure img {
+  width: 1rem;
 }

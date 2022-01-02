@@ -8,9 +8,8 @@ const API_KEY_VALUE = process.env.API_KEY_VALUE
 
 let cache = apiCache.middleware
 
-router.get('/', cache('5 minutes'), async (req, res) => {
+router.get('/', cache('15 seconds'), async (req, res) => {
   try {
-    console.log()
     const params = new URLSearchParams({
       [API_KEY_NAME]: API_KEY_VALUE,
       ...url.parse(req.url, true).query,

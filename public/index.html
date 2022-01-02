@@ -5,20 +5,68 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/weather-icons.css">
+    <link rel="stylesheet" href="style/weather-icons-wind.css">
     <title>Weather</title>
   </head>
   <body>
+    <nav class="navbar">
+      <ul id="first-level-nav">
+        <li class="logo">
+          <a href="/"><h3>Weather</h3></a>
+        </li>
+        <div id="desktop-menu">
+          <form method="Get" role="search" class="city-search-form">
+            <input
+              type="text"
+              id="city-search"
+              placeholder="Enter your city. Ex: Hanoi, VN"
+            />
+            <input type="submit" style="display: none" />
+          </form>
+        </div>
+      </ul>
+    </nav>
     <div class="container">
-      <div class="weather">
-
+      <div class="weather-info">
+        <div class="head">
+          <span class="date-time" style="color: red"></span>
+          <h2 class="location"><span class="city"></span>, <span class="country"></span></h2>
+          <div style="color: purple;display: flex;align-content: space-between;">
+            <div style="display: inline;font-size: .7rem;">
+              <span>Local:</span>
+              <span class="local-time"></span>.
+            </div>
+            <span style="font-size: .7rem;" class="time-offset"></span>
+          </div>
+        </div>
+        <div class="detail">
+          <div class="current-temp">
+            <i class="fas fa-thermometer-quarter" id="thermometer"></i>
+            <div class="heading"><span class="celsius"></span>&deg;C</div>
+          </div>
+          <div class="bold">Feels like <span class="feels-like"></span>&deg;C. <span class="description"></span></div>
+          <ul class="weather-items">
+            <li class="wind">
+              <span class="icon-wind-direction"><i id="wind-icon"></i></span>
+              <span class="wind-speed"></span>m/s <span class="wind-direction"></span>
+            </li>
+            <li class="pressure">
+              <img src="assets/svg/barometer.svg" alt="">
+              <span class="pressure-indicator"></span>hPa
+            </li>
+            <li><span class="symbol">Humidity: </span><span class="humidity"></span>%</li>
+            <li>
+              <span class="symbol">Dew point: </span><span class="dew-point"></span>&deg;C
+            </li>
+            <li><span class="symbol">Visibility: </span><span class="visibility">10.0</span>km</li>
+          </ul>
+        </div>
       </div>
-      <form class="weather-form">
-        <input type="text" id="city-input" placeholder="Enter a city" />
-        <button type="submit">Submit</button>
-
-      </form>
+      <div class="map"></div>
     </div>
     <footer>&copy;thinhha-dev</footer>
     <script src="main.js"></script>
+    <script src="https://kit.fontawesome.com/d62f739f67.js" crossorigin="anonymous"></script>
   </body>
 </html>
